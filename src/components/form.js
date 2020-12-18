@@ -28,7 +28,19 @@ export default function Form(props){
                     <div>{errors.quantity}</div>
                 </div>
             </div>
-
+            <div className='name'>
+                <label>
+                    <input
+                    name='name'
+                    type='text'
+                    minLength='3'
+                    placeholder='name'
+                    value={values.name}
+                    onChange={onChange}
+                    required
+                    />
+                </label>
+            </div>
             <div className='size'>
                 <label><h2>Choice of Size</h2>
                     <p>Required</p>
@@ -222,6 +234,22 @@ export default function Form(props){
                     />
                 </label>
             </div>
+            <div className='quantity'>
+                <h2>Quantity</h2>
+                <label>
+                    <input
+                    name='quantity'
+                    type='text'
+                    maxLength='3'
+                    placeholder='Quantity'
+                    value={values.quantity}
+                    onChange={onChange}
+                    required
+                    />
+                </label>
+            </div>
+        
+            <button disabled={disabled}>Add to Order</button>
         </form>
     )
 }

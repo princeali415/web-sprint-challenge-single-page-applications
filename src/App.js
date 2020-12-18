@@ -104,9 +104,7 @@ const inputChange = (name, value) => {
   //submit form function 
   const formSubmit = () => {
     const newOrder = {
-      email: formValues.email.trim(),
-      password: formValues.password.trim(),
-      terms_of_service: formValues.terms_of_service,
+      
       name: formValues.name.trim(),
 
       size:formValues.size.trim(),

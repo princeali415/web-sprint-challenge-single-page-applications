@@ -1,11 +1,11 @@
-import { Redirect } from 'react-router-dom';
+
 import * as yup from 'yup';
 
 
 export default yup.object().shape({
     name: yup.string()
     .required('Name is required')
-    .min(2, 'Name needs to be at least 2 characters long.'),
+    .min(2, 'Name needs to be at least 3 characters long.'),
 
     size: yup.string()
     .oneOf(['12inch', '20inch', '28inch'])
@@ -33,4 +33,7 @@ export default yup.object().shape({
     gluten_free_crust: yup.boolean(),
 
     special_instructions: yup.string(),
+
+    quantity: yup.string()
+    .required('This section is required')
 });
